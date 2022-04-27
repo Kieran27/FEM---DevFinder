@@ -1,0 +1,390 @@
+/* Custom Variables */
+:root {
+  /* Light Mode Colors */
+  --Clr-Blue-Grey: rgb(105, 124, 154);
+  --Clr-Blue-Mid: rgb(75, 106, 155);
+  --Clr-Grey-Dark: rgb(43, 52, 66);
+
+  --Clr-White-Off: rgb(246, 248, 255);
+  --Clr-White: rgb(254, 254, 254);
+
+  /* Dark Mode Colors */
+  --Clr-White-Pure: rgb(255, 255, 255);
+  --Clr-Sea-Blue: rgb(20, 29, 47);
+  --Clr-Dark-Blue: rgb(30, 42, 71);
+
+  /* Shared Colors */
+  --Clr-Blue-Primary: rgb(0, 121, 255);
+
+  /* Font */
+  --Primary-Font: 'Space Mono', monospace;
+}
+
+/* Default Styling */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--Primary-Font);
+  background: var(--Clr-White-Off);
+  width: 100vw;
+  height: 100vh;
+}
+
+h1 {
+  font-family: var(--Primary-Font);
+  color: var(--Clr-Grey-Dark);
+  font-size: 1.625rem;
+  line-height: 2.375rem;
+}
+
+h2 {
+  font-family: var(--Primary-Font);
+  font-size: 1.375rem;
+  line-height: 2rem;
+  margin: 0;
+}
+
+h3 {
+  font-family: var(--Primary-Font);
+  color: var(--Clr-Blue-Primary);
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin: 0;
+}
+
+h4 {
+  font-family: var(--Primary-Font);
+  color: var(--Clr-Blue-Mid);
+  font-size: 0.8125rem;
+  line-height: 1.25rem;
+}
+
+p {
+  font-family: var(--Primary-Font);
+  color: var(--Clr-Grey-Dark);
+  font-size: 0.9375rem;
+  line-height: 1.5625rem;
+}
+
+a {
+  color: var(--Clr-Blue-Mid);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+/* Pseudo Styling */
+::placeholder {
+  font-family: var(--Primary-Font);
+}
+
+.wrapper {
+  padding: 1rem;
+  max-width: 730px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mode-toggle-container {
+  display: flex;
+  align-items: center;
+}
+
+.mode-toggle-text {
+  text-transform: uppercase;
+  color: var(--Clr-Blue-Grey);
+  letter-spacing: 1.5px;
+  margin-top: -0.2rem;
+  transition: 0.3s;
+}
+
+.btn-dark-mode {
+  background: none;
+  border: none;
+  padding: 0 0 0 1rem;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+/* SearchBar Styling */
+
+.user-search-bar-container {
+  position: relative;
+  margin-top: 1.5rem;
+}
+
+.searchbar {
+  width: 100%;
+  padding: 1.4rem 8.5rem 1.4rem 3rem;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
+}
+
+.search-icon {
+  position: absolute;
+  left: 0;
+  top: 17px;
+  padding: 0 1rem;
+}
+
+.submit-btn {
+  position: absolute;
+  right: 0;
+  top: 6px;
+  margin-right: 1rem;
+  background: var(--Clr-Blue-Primary);
+  border: none;
+  color: var(--Clr-White-Pure);
+  font-family: var(--Primary-Font);
+  font-size: 1rem;
+  padding: 0.75rem 1.75rem;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* User Card Styling */
+
+.user-card-container {
+  margin-top: 1.5rem;
+  padding: 2.5rem 2rem;
+  border-radius: 10px;
+  box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
+  background: var(--Clr-White);
+}
+
+.user-card {
+  display: flex;
+  justify-content: space-between;
+}
+
+.user-card-main-left {
+  display: none;
+}
+
+/* User Card Heading */
+
+.user-card-header {
+  display: flex;
+}
+
+.header-left {
+  margin-right: 2rem;
+}
+
+.user-img-circle {
+  margin-top: 0.25rem;
+  height: 70px;
+  width: 70px;
+  background: pink;
+  border-radius: 50%
+}
+
+.user-date {
+  margin: 0;
+}
+
+.header-right {
+  display: flex;
+  flex-direction: column;
+}
+
+/* User Card Body */
+
+.user-card-body {
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.user-card-body-stats {
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  background: var(--Clr-White-Off);
+  display: flex;
+  justify-content: center;
+  border-radius: 15px;
+}
+
+.stat-container {
+  padding: 0 1.3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.stat-container p {
+  font-weight: bold;
+  font-size: 1.375rem;
+  line-height: 2rem;
+  margin: 0;
+}
+
+.stat-container h4 {
+  margin: 1rem 0 0.5rem 0;
+}
+
+/* User Card Footer */
+
+.user-card-footer {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.footer-wrapper {
+  margin-right: 5rem;
+}
+
+.user-metadata {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.6rem;
+}
+
+.metadata-icon {
+  margin-right: 1rem;
+}
+
+.metadata-icon img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.metadata-text p {
+  margin: 0;
+}
+
+.user-name-desktop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-name-desktop > .user-date {
+  display: none;
+  margin-top: 0.1rem;
+  margin-left: 10rem;
+}
+
+/* Hover */
+
+a:hover {
+  text-decoration: underline;
+}
+
+.submit-btn:hover {
+  background: #60ABFF;
+}
+
+.btn-dark-mode:hover + img {
+  background: red;
+}
+
+/* Utility Classes */
+
+.background-image {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.body-toggle {
+  background: var(--Clr-Sea-Blue);
+  color: var(--Clr-White-Pure);
+}
+
+/* Media Queries */
+
+@media only screen and (min-width: 650px) {
+
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .user-search-bar-container {
+    margin-top: 0.75rem;
+  }
+
+  .searchbar {
+    padding: 1.4rem 10rem 1.4rem 4rem;
+  }
+
+  .user-card-container {
+    padding: 2.5rem 3rem;
+  }
+
+  .user-card-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .user-img-circle {
+    height: 117px;
+    width: 117px;
+  }
+
+  .user-card-body-stats {
+    padding: 1rem 6rem 1rem 2rem;
+    justify-content: space-between;
+  }
+
+  .stat-container {
+    text-align: left;
+  }
+}
+
+@media only screen and (min-width: 950px) {
+
+  body {
+    background: pink
+  }
+
+  .searchbar {
+    padding: 1.4rem 10rem 1.4rem 4rem;
+  }
+
+  .user-card-container {
+    padding: 2.5rem 2rem;
+  }
+
+  .user-card-main-left {
+    display: block;
+  }
+
+  .user-card-main-right {
+    margin-left: 2rem;
+  }
+
+  .header-left {
+    display: none;
+  }
+
+  .user-name-desktop > .user-date {
+    display: inline;
+  }
+
+  #user-date-smallscreen {
+    display: none;
+  }
+
+  .footer-wrapper {
+    margin-right: 2rem;
+  }
+
+}

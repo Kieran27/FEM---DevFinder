@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <script src="main.js" defer charset="utf-8"></script>
+  <title>Frontend Mentor | GitHub user search app</title>
+</head>
+
+<body>
+  <main>
+    <div class="wrapper">
+
+      <header class="header">
+        <h1>devfinder</h1>
+        <div class="mode-toggle-container">
+          <span class="mode-toggle-text">Dark</span>
+          <button data-id='btn-dark-toggle' class="btn-dark-mode"><img src="assets/icon-moon.svg" alt=""></button>
+        </div>
+      </header>
+
+      <div class="user-search-bar-container">
+        <form id='search-form'>
+        <input class='searchbar' id='searchbar' type="search" placeholder='Search Github username...'>
+        <span class="search-icon"><img src="assets/icon-search.svg" alt=""></span>
+        <input class='submit-btn' id='submit' type="submit" value="Search">
+        </form>
+      </div>
+
+      <div class="user-card-container">
+        <article class="user-card">
+          <div class="user-card-main-left">
+            <div data-id='user-img-desktop' class="user-img-circle"></div>
+          </div>
+          <div class="user-card-main-right">
+            <div class="user-card-header">
+              <div class="header-left">
+                <div data-id='user-img-mobile' class="user-img-circle"></div>
+              </div>
+              <div class="header-right">
+                <div class="user-name">
+                  <div class="user-name-desktop">
+                    <h2 data-id='user-name'>The Octocat</h2>
+                    <p data-id='user-join-date' class='user-date'>Joined 25 Jan 2011</p>
+                  </div>
+                  <a data-id='user@link' href="#"><h3 data-id='user@'>@octocat</h3></a>
+                  <p id="user-date-smallscreen" data-id='user-join-date' class='user-date'>Joined 25 Jan 2011</p>
+                </div>
+              </div>
+            </div>
+            <div class="user-card-body">
+              <p data-id='user-bio'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur nesciunt optio aliquam, sed, incidunt ab.</p>
+              <div class="user-card-body-stats">
+                <div class="stat-container">
+                  <h4>Repos</h4>
+                  <p data-id='user-repos'>8</p>
+                </div>
+                <div class="stat-container">
+                  <h4>Followers</h4>
+                  <p data-id='user-followers'>3938</p>
+                </div>
+                <div class="stat-container">
+                  <h4>Following</h4>
+                  <p data-id='user-following'>9</p>
+                </div>
+              </div>
+            </div>
+            <div class="user-card-footer">
+              <div class="footer-wrapper">
+                <div class="user-metadata">
+                  <div class="metadata-icon">
+                    <img src="assets/icon-location.svg" alt="">
+                  </div>
+                  <div class="metadata-text">
+                    <p data-id='user-location'>San Francisco</p>
+                  </div>
+                </div>
+                <div class="user-metadata">
+                  <div class="metadata-icon">
+                    <img src="assets/icon-website.svg" alt="">
+                  </div>
+                  <div class="metadata-text">
+                    <p><a data-id='user-blog' href="#">https://github.blog</a></p>
+                  </div>
+                </div>
+              </div>
+              <div class="footer-wrapper">
+              <div class="user-metadata">
+                <div class="metadata-icon">
+                  <img src="assets/icon-twitter.svg" alt="">
+                </div>
+                <div class="metadata-text">
+                  <p><a data-id='user-twitter' href="#">https://github.blog</a></p>
+                </div>
+              </div>
+              <div class="user-metadata">
+                <div class="metadata-icon">
+                  <img src="assets/icon-company.svg" alt="">
+                </div>
+                <div class="metadata-text">
+                  <p><a data-id='user-position' href="#">https://github.blog</a></p>
+                </div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+
+    </div>
+
+  </main>
+
+</body>
+
+</html>
