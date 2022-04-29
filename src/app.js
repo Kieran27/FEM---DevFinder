@@ -13,4 +13,11 @@ document.querySelector('form').addEventListener('submit', (e) => {
   clearInput();
 })
 
+document.getElementById('searchbar').addEventListener('input', () => {
+  const errMsg = document.querySelector("[data-id='error-message']");
+  if (errMsg.classList.contains('display-toggle')) {
+    return errMsg.classList.toggle('display-toggle');
+  }
+})
+
 fetchUser(currentUser);

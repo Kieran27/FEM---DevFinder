@@ -72,7 +72,7 @@ p {
 }
 
 a {
-  color: var(--Clr-Blue-Mid);
+  color: var(--Clr-Grey-Dark);
   text-decoration: none;
   transition: 0.3s;
 }
@@ -135,6 +135,16 @@ a {
   left: 0;
   top: 17px;
   padding: 0 1rem;
+}
+
+.error-message {
+  position: absolute;
+  right: 0;
+  top: 20px;
+  padding: 0 9rem;
+  color: red;
+  font-size: 0.8rem;
+  display: none;
 }
 
 .submit-btn {
@@ -306,6 +316,14 @@ a:hover {
   color: var(--Clr-White-Pure);
 }
 
+.display-toggle {
+  display: block;
+}
+
+.unavailable-text {
+  color: red;
+}
+
 /* Media Queries */
 
 @media only screen and (min-width: 650px) {
@@ -350,10 +368,6 @@ a:hover {
 }
 
 @media only screen and (min-width: 950px) {
-
-  body {
-    background: pink
-  }
 
   .searchbar {
     padding: 1.4rem 10rem 1.4rem 4rem;

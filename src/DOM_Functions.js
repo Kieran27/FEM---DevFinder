@@ -1,5 +1,4 @@
-
-import { formatDate, appendName, appendBio, appendLocation } from './String_Methods';
+import { formatDate, appendName, appendBio, appendInput } from './String_Methods';
 
 const clearInput = () => {
   const searchValue = document.getElementById('searchbar');
@@ -55,14 +54,54 @@ const appendDataFooter = (data) => {
   const userTwitter = document.querySelector("[data-id='user-twitter']");
   const userPosition = document.querySelector("[data-id='user-position']");
 
-  userLocation.textContent = appendLocation(data.location);
-  userBlog.textContent = 'Not Available'
-  userTwitter.textContent = 'Not Available';
-  userPosition.textContent = 'Not Available';
+  checkForEmpty(userLocation, userBlog, userTwitter, userPosition);
+
+  userLocation.textContent = appendInput(data.location);
+
+  userBlog.textContent = appendInput(data.blog)
+  userBlog.setAttribute('href', data.blog);
+
+  userTwitter.textContent = appendInput(data.twitter_username);
+  userPosition.textContent = appendInput(data.company);
+
+
+}
+
+const errorMsg = (error) => {
+  const errMsg = document.querySelector("[data-id='error-message']");
+  errMsg.textContent = error;
+  return errMsg.classList.toggle('display-toggle');
+}
+
+const checkForEmpty = (userLocation, userBlog, userTwitter, userPosition) => {
+  if (userLocation.textContent === 'Not Available') {
+    userLocation.classList.add('unavailable-text');
+  } else {
+    userLocation.classList.remove('unavailble-text');
+  }
+
+  if (userBlog.textContent === 'Not Available') {
+    userBlog.classList.add('unavailable-text');
+  } else {
+    userBlog.classList.remove('unavailable-text');
+  }
+
+  if (userTwitter.textContent === 'Not Available') {
+    userTwitter.classList.add('unavailable-text');
+  } else {
+    userTwitter.classList.remove('unavailable-text');
+  }
+
+  if (userPosition.textContent === 'Not Available') {
+    userPosition.classList.add('unavailable-text');
+  } else {
+    userPosition.classList.remove('unavailable-text');
+  }
 }
 
 
 export {
   clearInput,
-  appendData
+  appendData,
+  errorMsg
 }

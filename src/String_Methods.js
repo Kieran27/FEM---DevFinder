@@ -21,16 +21,16 @@ const appendBio = (bio) => {
   return bio;
 }
 
-const appendLocation = (location) => {
-  if (!location) {
+const appendInput = input => {
+  if (!input) {
     return 'Not Available';
   }
-  return location;
+  return input;
 }
 
 export {
   formatDate,
   appendName,
   appendBio,
-  appendLocation
+  appendInput
 }
