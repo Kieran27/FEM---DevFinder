@@ -99,6 +99,29 @@ const checkForEmpty = (userLocation, userBlog, userTwitter, userPosition) => {
   }
 }
 
+document.querySelector('.btn-dark-mode').addEventListener('click', () => {
+  const body = document.querySelector('body');
+  const inputContainer = document.querySelector('#searchbar');
+  const userContainer = document.querySelector('.user-card-container');
+  const userStats = document.querySelector('.user-card-body-stats');
+  const link = document.querySelector("[data-id='user-blog']");
+  const pElem = document.querySelectorAll('p');
+  const headings = document.querySelectorAll('.title');
+  const modeText = document.querySelector('.mode-toggle-text');
+  const modeImg = document.querySelector("[data-id='dark-mode-icon']");
+
+  body.classList.toggle('body-toggle');
+  userStats.classList.toggle('body-toggle');
+  inputContainer.classList.toggle('input-toggle');
+  inputContainer.classList.toggle('text-toggle');
+  userContainer.classList.toggle('input-toggle');
+
+  pElem.forEach(p => {
+    p.classList.toggle('text-toggle');
+  })
+  headings.forEach(heading => heading.classList.toggle('text-toggle'))
+})
+
 
 export {
   clearInput,
